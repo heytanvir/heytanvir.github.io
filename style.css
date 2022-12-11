@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+:root {
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.hero_sec {
+  background-image: url(wallhaven-x659kz.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: bg-anime 12s infinite;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 5px;
+}
+.menu {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  font-size: 25px;
+}
+.menu > a {
+  border-radius: 15px;
+  margin: 5px 10px;
+  padding: 5px 5px;
+  text-decoration: none;
+  color: antiquewhite;
+  background-color: transparent;
+  font-weight: bold;
+  font-family: "pacifico";
+}
+.logo {
+  margin: 5px 5px;
+}
+.logo > label {
+  border-radius: 15px;
+  font-family: "pacifico";
+  color: #edeef5;
+  font-weight: bold;
+  font-size: 2em;
+  background-color: transparent;
+  padding: 0px 10px;
+}
+.menu > .active {
+  background-color: transparent;
+  border: 3px solid #edeef5;
+}
+.menu > a:hover {
+  color: #edeef5;
+  background-color: #2d42dd;
+  transition: background-color 0.5s;
+}
+@keyframes bg-anime {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+/* cards */
+.cards {
+  background-image: url(wallhaven-x659kz.jpg);
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.card {
+  background-color: rgba(126, 24, 185, 0.164);
+  margin: 5px;
+  border: 5px solid rgb(158, 193, 211);
+  border-radius: 10px;
+}
+.content {
+  padding: 10px;
+}
+.content h1 {
+  font-size: 2em;
+  color: aqua;
+  text-align: center;
+  background-color: rgb(231, 34, 34);
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+.content button {
+  grid-template-columns: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 10px;
+  color: #ffffff;
+  margin-left: 11em;
+  border: 0px solid #ffffff;
+  border-radius: 50px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fc01c6;
+}
+.content button:hover {
+  transition: background-color 2s;
+  background-color: blue;
+}
+@media screen and (max-width: 850px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .menu {
+    display: none;
+  }
+}
